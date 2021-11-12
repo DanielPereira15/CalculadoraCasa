@@ -21,6 +21,18 @@ public class MainActivity extends AppCompatActivity {
         tvNums = findViewById(R.id.tvNums);
     }
 
+    public void general (View v){
+        Button b= (Button)v;
+        switch (b.getTag().toString()){
+            case "uno":
+                    Toast.makeText(this,"boton1",Toast.LENGTH_SHORT).show();
+                break;
+            case "dos":
+                Toast.makeText(this,"boton2",Toast.LENGTH_SHORT).show();
+                break;
+        }
+
+    }
     public void inser1(View view) {
         if (tvNums.getText().equals("0")) {
             tvNums.setText("1");
